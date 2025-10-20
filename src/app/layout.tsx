@@ -83,16 +83,14 @@ export const metadata: Metadata = {
     description: "Discover our delicious range of pizzas made with the freshest ingredients. Visit us today!",
     url: "",
     siteName: "Pizzeria",
-    images: [{
-      url: "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_346q1PwyWBLFgxn5R5gWYFVRO0Y/tmp/delicious-pizza-1760940806973-32113086.jpg",
-      alt: "delicious pizza"
-    }],
+    images: [{ url: "https://images.pexels.com/photos/2909822/pexels-photo-2909822.jpeg?auto=compress&cs=tinysrgb&h=650&w=940", alt: "Colorful pink crust pizza with vegetables and herbs on a wooden platter. Perfect for food lovers." }],
     type: "website"
   },
   twitter: {
     card: "summary_large_image",
     title: "Pizzeria - Authentic Italian Pizza",
     description: "Discover our delicious range of pizzas made with the freshest ingredients.",
+    images: []
   },
   robots: {
     index: true,
@@ -102,9 +100,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+}: Readonly<{children: React.ReactNode;}>) {
   return (
     <html lang="en">
     <PostHogWrapper>

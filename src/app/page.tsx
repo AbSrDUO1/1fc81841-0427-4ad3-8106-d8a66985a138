@@ -1,4 +1,9 @@
-use client
+"use client"
+const assetMap: { id: string; url: string; alt?: string }[] = [
+  { "id": "heroImage", "url": "https://images.pexels.com/photos/2909822/pexels-photo-2909822.jpeg?auto=compress&cs=tinysrgb&h=650&w=940", "alt": "Colorful pink crust pizza with vegetables and herbs on a wooden platter. Perfect for food lovers." },
+  { "id": "aboutImage", "url": "https://images.pexels.com/photos/5216394/pexels-photo-5216394.jpeg?auto=compress&cs=tinysrgb&h=650&w=940", "alt": "Warm and inviting Italian cafe with a variety of pizzas and drinks displayed on a counter." }
+];
+
 import { ThemeProvider } from "@/providers/ThemeProvider";
 import NavbarStyleMinimal from '@/components/navbar/NavbarStyleMinimal';
 import HeroSplit from '@/components/sections/hero/HeroSplit';
@@ -8,8 +13,6 @@ import TestimonialCardTwo from '@/components/sections/testimonial/TestimonialCar
 import ContactCenter from '@/components/sections/contact/ContactCenter';
 import FooterLogoEmphasis from '@/components/sections/footer/FooterLogoEmphasis';
 
-const assetMap = [{"id":"heroImage","url":"https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_346q1PwyWBLFgxn5R5gWYFVRO0Y/tmp/delicious-pizza-1760940806973-32113086.jpg","alt":"delicious pizza"},{"id":"aboutImage","url":"https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_346q1PwyWBLFgxn5R5gWYFVRO0Y/tmp/cozy-pizzeria-1760940825024-49a719e1.jpg","alt":"cozy pizzeria"}];
-
 export default function Home() {
   return (
     <ThemeProvider
@@ -18,17 +21,20 @@ export default function Home() {
       borderRadius="pill"
     >
       <div id="nav" data-section="nav">
-        <NavbarStyleMinimal logoSrc="/brand/logowhite.svg" brandName="Pizzeria" />
+        <NavbarStyleMinimal
+          logoSrc="/brand/logowhite.svg"
+          brandName="Pizzeria"
+        />
       </div>
       <div id="hero" data-section="hero" className="scroll-mt-24">
         <div className="mx-auto px-4 md:px-6">
           <HeroSplit
             title="Welcome to Our Pizzeria"
             description="Experience the finest pizzas crafted with love."
-            imageSrc="https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_346q1PwyWBLFgxn5R5gWYFVRO0Y/tmp/delicious-pizza-1760940806973-32113086.jpg"
+            imageSrc="https://images.pexels.com/photos/2909822/pexels-photo-2909822.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
             buttons={[
               { text: "View Menu", href: "menu" },
-              { text: "Contact Us", href: "contact" },
+              { text: "Contact Us", href: "contact" }
             ]}
           />
         </div>
@@ -40,7 +46,7 @@ export default function Home() {
               { title: "Fresh Ingredients", description: "Only the freshest local ingredients." },
               { title: "Authentic Recipes", description: "Inspired by traditional Italian cuisine." }
             ]}
-            imageSrc="https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_346q1PwyWBLFgxn5R5gWYFVRO0Y/tmp/cozy-pizzeria-1760940825024-49a719e1.jpg"
+            imageSrc="https://images.pexels.com/photos/5216394/pexels-photo-5216394.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
           />
         </div>
       </div>
@@ -59,7 +65,7 @@ export default function Home() {
         <div className="mx-auto px-4 md:px-6">
           <TestimonialCardTwo
             testimonials={[
-              { id: "1", name: "Emily R.", role: "Food Blogger", testimonial: "Best pizza in town! Loved the ambiance and the service.", icon:"Package" }
+              { id: "1", name: "Emily R.", role: "Food Blogger", testimonial: "Best pizza in town! Loved the ambiance and the service.", icon: "Package" }
             ]}
           />
         </div>
