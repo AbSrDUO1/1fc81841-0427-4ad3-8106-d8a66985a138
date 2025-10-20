@@ -1,4 +1,4 @@
-"use client"
+"use client";
 const assetMap: { id: string; url: string; alt?: string }[] = [
   { "id": "heroImage", "url": "https://images.pexels.com/photos/2909822/pexels-photo-2909822.jpeg?auto=compress&cs=tinysrgb&h=650&w=940", "alt": "Colorful pink crust pizza with vegetables and herbs on a wooden platter. Perfect for food lovers." },
   { "id": "aboutImage", "url": "https://images.pexels.com/photos/5216394/pexels-photo-5216394.jpeg?auto=compress&cs=tinysrgb&h=650&w=940", "alt": "Warm and inviting Italian cafe with a variety of pizzas and drinks displayed on a counter." }
@@ -12,6 +12,7 @@ import ProductCardOne from '@/components/sections/product/ProductCardOne';
 import TestimonialCardTwo from '@/components/sections/testimonial/TestimonialCardTwo';
 import ContactCenter from '@/components/sections/contact/ContactCenter';
 import FooterLogoEmphasis from '@/components/sections/footer/FooterLogoEmphasis';
+import { Package } from 'lucide-react';
 
 export default function Home() {
   return (
@@ -65,7 +66,7 @@ export default function Home() {
         <div className="mx-auto px-4 md:px-6">
           <TestimonialCardTwo
             testimonials={[
-              { id: "1", name: "Emily R.", role: "Food Blogger", testimonial: "Best pizza in town! Loved the ambiance and the service.", icon: "Package" }
+              { id: "1", name: "Emily R.", role: "Food Blogger", testimonial: "Best pizza in town! Loved the ambiance and the service.", icon: Package }
             ]}
           />
         </div>
